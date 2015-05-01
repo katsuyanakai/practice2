@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         // Labelを作成.
         let myLabel: UILabel = UILabel(frame: CGRectMake(0,0,200,50))
         
-        // 背景をオレンジ色にする.
+        // 背景を青色にする.
         myLabel.backgroundColor = UIColor.blueColor()
         
         // 枠を丸くする.
@@ -77,7 +77,7 @@ class ViewController: UIViewController {
         button.layer.borderWidth = 1
         
         //ボタンをタップした時に実行するメソッドを指定
-        //button.addTarget(self, action: "tapped:", forControlEvents:.TouchUpInside)
+        button.addTarget(self, action: "tapped:", forControlEvents:.TouchUpInside)
         
         //viewにボタンを追加する
         self.view.addSubview(button)
@@ -85,6 +85,12 @@ class ViewController: UIViewController {
 
     
     }
+    
+    
+    func tapped(button :UIButton){
+        NSLog("tapped")
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
